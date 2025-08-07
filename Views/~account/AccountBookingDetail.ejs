@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<!-- set document to default english for UK english not US -->
+<html lang="en-GB">
+
+
+
+<%- include('../Partials/head') %>
+
+
+<body>
+  <%- include('../Partials/banner') %>
+  <%- include('../Partials/search') %>
+ 
+  <section class = "content-section  "> 
+    <form  action="../../auth/login" method="POST"class = "CreateForm hardbox">
+      <input type="hidden" name="redirect" value="<%= redirect %>">
+      <h1>Login</h1>
+  
+      <div class = "form-row"> 
+  
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+      
+        
+      </div>
+  
+  
+      <div class = "form-row"> 
+  
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password">
+ 
+        
+      </div>
+      <% if (error_msg) { %>
+        <p> <%= error_msg %></p>
+      <% } %>
+  
+      <button type ="submit" class="CreateAccountButton loginbutton" >Create Account</button>
+  
+      <a href="/auth/CreateAccount?<%= redirect ? `redirect=${redirect}` : '' %>">Create an account</a>
+
+  
+    </article>
+  </section>
+
+
+  <%- include('../Partials/footer') %>
+
+<script src="../../Public/Javascript/togglesearch.js"></script>
+
+
+</body>
+

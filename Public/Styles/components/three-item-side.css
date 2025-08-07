@@ -1,0 +1,133 @@
+.three-item-side{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 3em;
+    padding:1em;
+    
+}
+
+
+.three-item-side article{
+  
+    border-radius: 1em;
+    justify-self: center;
+    width: 90%;
+    height: 20rem;
+    background-color: var(--AccentGreyColour);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 40%;
+
+    grid-template-areas:
+    "image-container"
+    "text-container";
+}
+
+.three-item-side article .img-container{
+
+border-radius: 1em 1em 0em 0 ;
+grid-area: image-container;
+
+
+overflow: hidden;
+
+}
+
+.three-item-side article .img-container img{
+  width: 100%;
+  height: 100%;
+ 
+  object-fit: cover;
+}
+.three-item-side article .text-container{
+
+  grid-area: text-container;
+  border-radius:0em 0 1em 1em  ;
+  display: grid;
+  
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 0.3fr 0.1fr;
+
+  grid-template-areas:
+  "box-title"
+  "box-text"
+  "box-search";
+
+
+}
+
+.three-item-side article .text-container h2{
+  grid-area: box-title;
+  padding: 0.4rem;
+  
+    font-size: clamp(0.7rem, 1.2rem, 1.2rem);
+}
+.three-item-side article .text-container p{
+  padding: 0.4rem;
+  grid-area: box-text;
+  font-size: clamp(0.7rem, 1rem, 1.2rem);
+}
+
+.three-item-side article .text-container a{
+  padding: 0.4rem;
+  grid-area: box-search;
+  font-size: clamp(0.7rem, 0.8rem, 1.2rem);
+}
+@media (width >= 768px) {
+   
+  .three-item-side{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 3em;
+    padding:1em;
+    
+}
+  .three-item-side article{
+    width: 90%;
+    height: 20rem;
+}
+
+}
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+    
+  
+  
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+    
+  .three-item-side{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 3em;
+    padding:1em;
+    
+}
+  .three-item-side article{
+    width: 70%;
+    height: 20rem;
+}
+
+
+
+}
+    
+  
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

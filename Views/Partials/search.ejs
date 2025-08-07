@@ -1,0 +1,221 @@
+
+
+<section class="MobileSearchBar">
+    <button id="search-toggle-btn" class="searchToggleBtn">Search</button>
+  </section>
+  
+
+<section class ="SearchBar">
+<form id ="searchform" action="/search/Hotel?&type=1" method="get">
+  <button id="search-close-btn" class="searchCloseBtn">Close</button>
+  <input class ="holidaytype" type="hidden" name="type" value="1">
+<p id="search-cta">Where will your next adventure take you..</p>
+
+<ul id = "search-options" class ="optionbuts">
+<li class ="packageButton"><p class=" underlinehover">Packages</p></li>
+<li class ="FlightButton"><p class=" underlinehover">Flights</p></li>
+<li class="HotelButton"><p class=" underlinehover">Hotels</p></li>
+</ul>
+
+
+<div id="PackagesSearchContainer"class = "searchcontainer">
+
+  <div id="Origin-search">
+    <label for="OriginSelect">Departure Airport</label>
+    <select id="OriginSelect" class="OriginSelect" name="originID">
+        <option value="">-- Select an airport --</option>
+        <option value="1">London Heathrow (LHR)</option>
+        <option value="LGW">London Gatwick (LGW)</option>
+        <option value="MAN">Manchester (MAN)</option>
+        <option value="EDI">Edinburgh (EDI)</option>
+      </select>
+
+    </div>
+  
+    <div id="Desination-search">
+            <label for="DestinationSelect">Destination</label>
+            <select id="DestinationSelect" class="DestinationSelect" name="destinationID">
+                <option value="">-- Select a country --</option>
+                <option value="2">Greece</option>
+                <option value="LGW">London Gatwick (LGW)</option>
+                <option value="MAN">Manchester (MAN)</option>
+                <option value="EDI">Edinburgh (EDI)</option>
+              </select>
+            </div>
+
+            <div id="date-search" >
+                <label for="Date"> Date of travel </label>
+                <input type="date" id="Date" name="Date"  class="date-search">
+            </div>
+
+            <div id="duration-search" >
+                <label for="duration">Duration of travel</label>
+                <select id="duration" class="duration-search" name="numOfNights">
+                    <option value="3">3 Nights</option>
+                    <option value="5">5 Nights</option>
+                    <option value="7">7 Nights</option>
+                    <option value="10">10 Nights</option>
+                    <option value="14">14 Nights</option>
+                  </select>
+                </div>
+
+                <div id="passengers-search">
+                  <label for="Passengers">Passengers</label>
+              
+
+                  <select id="adults" name="adult"  class="adult-search">
+                    <option value="1">1 adult</option>
+                    <option value="2">2 adult</option>
+                    <option value="3">3 adult</option>
+                    <option value="4">4 adult</option>
+                    <option value="5">5 adult</option>
+                  </select>
+
+
+                  <select id="childpass" name="child" class="child-search">
+                    <option value="0">0 Children</option>
+                    <option value="1">1 Children</option>
+                    <option value="2">2 Children</option>
+                    <option value="3">3 Children</option>
+                    <option value="4">4 Children</option>
+                    <option value="5">5 Children</option>
+                  </select>
+                  </div>
+
+                    
+                    <button  class = "searchButton " id="search-button"  value="Search">Search</button>
+       </div>
+
+       
+<div id="flightssearchContainer"class = "searchcontainer hidden">
+
+  <div id="Origin-search">
+    <label for="OriginSelect">Departure Airport</label>
+    <select id="OriginSelect" class="OriginSelect" name="originID">
+        <option value="">-- Select an airport --</option>
+        <option value="1">London Heathrow (LHR)</option>
+        <option value="LGW">London Gatwick (LGW)</option>
+        <option value="MAN">Manchester (MAN)</option>
+        <option value="EDI">Edinburgh (EDI)</option>
+      </select>
+
+    </div>
+  
+    <div id="Desination-search">
+            <label for="DestinationSelect">Destination Airport</label>
+            <select id="DestinationSelect" class="DestinationSelect"  name="destinationID">
+                <option value="">-- Select a country --</option>
+                <option value="2">Greece</option>
+                <option value="LGW">London Gatwick (LGW)</option>
+                <option value="MAN">Manchester (MAN)</option>
+                <option value="EDI">Edinburgh (EDI)</option>
+              </select>
+            </div>
+
+            <div id="date-search">
+                <label for="Date"> Date of travel </label>
+                <input type="date" id="Date" name="Date" class="date-search">
+            </div>
+
+            <div id="duration-search">
+                <label for="duration">Duration of travel</label>
+                <select id="duration" class="duration-search" name="numOfNights">
+                    <option value="3">3 Nights</option>
+                    <option value="5">5 Nights</option>
+                    <option value="7">7 Nights</option>
+                    <option value="10">10 Nights</option>
+                    <option value="14">14 Nights</option>
+                  </select>
+                </div>
+
+                <div id="passengers-search">
+                  <label for="Passengers">Passengers</label>
+              
+
+                  <select id="adults" name="adult"  class="adult-search">
+                    <option value="1">1 adult</option>
+                    <option value="2">2 adult</option>
+                    <option value="3">3 adult</option>
+                    <option value="4">4 adult</option>
+                    <option value="5">5 adult</option>
+                  </select>
+
+
+                  <select id="childpass" name="child"  class="child-search">
+                    <option value="0">0 Children</option>
+                    <option value="1">1 Children</option>
+                    <option value="2">2 Children</option>
+                    <option value="3">3 Children</option>
+                    <option value="4">4 Children</option>
+                    <option value="5">5 Children</option>
+                  </select>
+                  </div>
+
+                    
+                    <button  class = "searchButton " id="search-button"  value="Search">Search</button>
+       </div>
+
+       
+<div id="HotelssearchContainer" class = "searchcontainer hidden">
+
+    <div id="Desination-search">
+            <label for="DestinationSelect">Destination</label>
+            <select class="DestinationSelect" id="DestinationSelect" name="destinationID">
+                <option value="">-- Select a country --</option>
+                <option value="2">Greece</option>
+                <option value="LGW">London Gatwick (LGW)</option>
+                <option value="MAN">Manchester (MAN)</option>
+                <option value="EDI">Edinburgh (EDI)</option>
+              </select>
+            </div>
+
+            <div id="date-search" >
+                <label for="Date"> Date of travel </label>
+                <input type="date" id="Date" name="Date" class="date-search">
+            </div>
+
+            <div id="duration-search">
+                <label for="duration">Duration of travel</label>
+                <select id="duration" name="numOfNights" class="duration-search">
+                    <option value="3">3 Nights</option>
+                    <option value="5">5 Nights</option>
+                    <option value="7">7 Nights</option>
+                    <option value="10">10 Nights</option>
+                    <option value="14">14 Nights</option>
+                  </select>
+                </div>
+
+                <div id="passengers-search">
+                  <label for="Passengers">Passengers</label>
+              
+
+                  <select id="adults" name="adult" class="adult-search">
+                    <option value="1">1 adult</option>
+                    <option value="2">2 adult</option>
+                    <option value="3">3 adult</option>
+                    <option value="4">4 adult</option>
+                    <option value="5">5 adult</option>
+                  </select>
+
+
+                  <select id="childpass" name="child" class="child-search">
+                    <option value="0">0 Children</option>
+                    <option value="1">1 Children</option>
+                    <option value="2">2 Children</option>
+                    <option value="3">3 Children</option>
+                    <option value="4">4 Children</option>
+                    <option value="5">5 Children</option>
+                  </select>
+                  </div>
+
+                    
+                    <button  class = "searchButton " id="search-button"  value="Search">Search</button>
+       </div>
+
+
+</form>
+</section>
+
+<script src = "../../Public/Javascript/getRequest.js"></script>
+<script src = "../../Public/Javascript/SearchBar.js"></script>
+<script src = "../../Public/Javascript/searchvalidation.js"></script>

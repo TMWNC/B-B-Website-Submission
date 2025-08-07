@@ -1,0 +1,32 @@
+
+.underlinehover{
+    display: inline-block;
+}
+/* stylings for the link text within the nav bar */
+.underlinehover:hover{
+    text-decoration: none;
+ 
+}
+
+/* add an underline to the nav items by default it is hidden using scale 0 */
+.underlinehover::after {
+  content: '';
+  display: block;
+  height: 0.2em;
+  background-color: var(--fontWhite);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  margin-top: 0.1em; /* space between text and underline */
+  
+}
+
+/* but when hovered scale it up to 1  */
+.underlinehover:hover::after {
+  transform: scaleX(1);
+}
+
+
+.underlinehover.active {
+    color: yellow;
+  }

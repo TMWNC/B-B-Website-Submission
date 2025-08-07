@@ -1,0 +1,356 @@
+/* Created 10/07/2025 by Tommy Mannix */
+
+/* This CSS document holds the properties fror the navigation bar  */
+
+/* Default is for Smart phones under mobile first compliance, using a burger menu */
+
+
+/* background banner bar */
+header{
+    border-bottom: 1px solid #eee;
+    height: 4rem;
+    background-color: var(--AccentGreyColour);
+}
+
+/* Navigatior bar hide off screen and occupy full width when transitioned on to screen */
+
+/* nav bar overview for location of */
+nav{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    background-color: #f2f2f2;
+    transform: translateX(-50rem);
+    top: 0;
+    z-index: 99; 
+    transition: 0.5s;
+}
+
+/* wrapper for the 3 bar burger menu icon */
+.burger-wrapper {
+    cursor: pointer;
+  }
+
+
+  
+/* stylings for the un ordered list that contains the nav items 
+show items vertically in a flex box with a small gap */
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+row-gap: 2em;
+   height: 80%;
+   width: 60%;
+   justify-content: center;
+}
+
+nav ul li{
+    display: block;
+    width: 100%;
+    height: 10%;
+
+}
+
+/* stylings for the link text within the nav bar */
+nav ul li a {
+    display: inline-block;
+    position: relative;
+    margin: 0.3em 1em;
+font-size: 2rem;
+text-decoration: none;
+color: var(--FontBlack);
+}
+
+/* stylings for the link text within the nav bar */
+nav ul li a:hover{
+    text-decoration: none;
+    
+}
+
+/* add an underline to the nav items by default it is hidden using scale 0 */
+nav ul li a::after {
+  content: '';
+  display: block;
+  height: 0.1em;
+  background-color: var(--fontBlack);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  margin-top: 0.1em; /* space between text and underline */
+  
+}
+
+/* but when hovered scale it up to 1  */
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* The burger menu operates with a check box, but we want it hidden on screen */
+#burgercheck {
+    display: none;
+}
+
+/* but when it is checked then transition the nav into position  */
+#burgercheck:checked ~ nav {
+    transform: translateX(0);
+}
+
+
+/* burger menu icon label location on */
+#burger {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    Left: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+
+/* These are the burger menu bars as coloured Divs */
+#burger > div {
+  /* Change this to chenge the thickness */
+    height: 0.4em;
+    background-color: var(--fontBlack);
+    transition: 0.5s;
+
+     /* higer Z index so it overlays on the burger menu  */
+    z-index: 999;
+}
+
+
+/* burger menu items animations */
+
+/* If the burger menu is selected change the divs to black bars */
+#burgercheck:checked ~ #burger > div {
+  background-color: #000;
+}
+
+
+/* individually animate the bars for bar 1 rotate 45degrees */
+#burgercheck:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+
+/* hide this bar as it is not needed in the X shape */
+#burgercheck:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+}
+
+/* rotate this the opposite way to form X */
+#burgercheck:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+
+  
+@media (width >= 768px) {
+  header{
+    border-bottom: 1px solid #eee;
+    height: 8rem;
+    background-color: var(--AccentGreyColour);
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav {
+  position: relative;
+  transform: none;
+  background: transparent;
+  z-index: auto;
+  width: 90%;
+  height: 100%;
+  display: flex;
+justify-content: flex-end;
+}
+
+nav ul {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  height: auto;
+  padding: 0;
+  gap: 2rem;
+}
+
+nav ul li {
+  height: auto;
+  width: auto;
+  display: block;
+ 
+}
+
+
+nav ul li a {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  color: var(--FontWhite);
+}
+
+
+#burger,
+#burgercheck {
+  display: none;
+}
+nav ul li a::after {
+  content: '';
+  display: block;
+  height: 0.1em;
+  background-color: var(--FontWhite);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  margin-top: 0.1em; /* space between text and underline */
+  
+}
+
+
+}
+
+
+@media (width >= 1024px) {
+  /* Small laptops and larger tablets in landscape */
+  
+  header{
+    border-bottom: 1px solid #eee;
+    height: 8rem;
+    background-color: var(--AccentGreyColour);
+}
+
+nav {
+  position: relative;
+  transform: none;
+  background: transparent;
+  z-index: auto;
+  width: 90%;
+  height: 100%;
+  display: flex;
+justify-content: flex-end;
+}
+
+nav ul {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  height: auto;
+  padding: 0;
+  gap: 2rem;
+}
+
+nav ul li {
+  height: auto;
+  width: auto;
+  display: block;
+ 
+}
+
+
+nav ul li a {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  color: var(--FontWhite);
+}
+
+
+#burger,
+#burgercheck {
+  display: none;
+}
+nav ul li a::after {
+  content: '';
+  display: block;
+  height: 0.1em;
+  background-color: var(--FontWhite);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  margin-top: 0.1em; /* space between text and underline */
+  
+}
+
+
+
+}
+
+
+@media (width >= 1280px) {
+/* for laptops make the bar horizontal and set the burger menu to be hidden */
+    header{
+        border-bottom: 1px solid #eee;
+        height: 8rem;
+        background-color: var(--AccentGreyColour);
+    }
+
+    nav {
+      position: relative;
+      transform: none;
+      background: transparent;
+      z-index: auto;
+      width: 90%;
+      height: 100%;
+      display: flex;
+justify-content: flex-end;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      height: auto;
+      padding: 0;
+      gap: 2rem;
+    }
+  
+    nav ul li {
+      height: auto;
+      width: auto;
+      display: block;
+     
+    }
+
+   
+    nav ul li a {
+      font-size: 1.3rem;
+      margin: 0;
+      padding: 0.5rem 1rem;
+      color: var(--FontWhite);
+    }
+  
+
+    #burger,
+    #burgercheck {
+      display: none;
+    }
+    nav ul li a::after {
+      content: '';
+      display: block;
+      height: 0.1em;
+      background-color: var(--FontWhite);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+      margin-top: 0.1em; /* space between text and underline */
+      
+    }
+  
+  }
+
+ 
+
+
+@media (width >= 1440px) {
+  /* Larger desktops and ultrawide monitors */ 
+  
+}

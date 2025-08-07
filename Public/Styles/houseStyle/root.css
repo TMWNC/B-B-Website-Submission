@@ -1,0 +1,49 @@
+/* Import font face for Open Sans from Adobe fonts */
+@import url("https://use.typekit.net/now4oxo.css");
+
+/* Declare house colours for use in the development */
+:root{
+    /* oceanTeal */
+    --PrimaryBrandColour:rgb(2 72 115);
+
+     /* Sunburst yellow */
+     --AccentYellowColour:rgb(242 226 5);
+
+      /* FireyOrange */
+    --AccentOrangeColour:rgb(242 159 5);
+
+     /* Crimson Red */
+     --AccentRedColour:rgb(217 24 24);
+
+     /* AccessibilityGrey */
+     --AccentGreyColour:rgb(242 242 242);
+     --fontWhite:#F8F8F9;
+     --fontBlack:#131E29;
+     --buttonUp:rgb(242 226 5);
+     --buttonHover:rgb(214 170 11);
+
+}
+
+
+/* remove all margins and set to border box */
+*{
+    margin:0;
+    box-sizing: border-box;
+
+    /* set all fonts to be open sans */
+    font-family: open-sans, sans-serif;
+}
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure everything uses border-box for consistent sizing */
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }

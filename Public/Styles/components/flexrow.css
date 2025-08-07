@@ -1,0 +1,11 @@
+.flexrowinline{
+    display: flex;
+    column-gap: 0.6rem;
+    flex-wrap: nowrap;
+}
+.flexcol{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.1rem;
+    flex-wrap: nowrap;
+}

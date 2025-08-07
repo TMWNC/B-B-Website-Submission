@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- 
+////////////////////////////////////////////////////////
+////// Created 28/07/2025 by Tommy Mannix          /////
+////// Hotel Detail Page Template                  /////
+////////////////////////////////////////////////////////
+-->
+
+<!-- set document to default UK English -->
+<html lang="en-GB">
+
+  <!-- 
+  ////////////////////////////////////////////////////////
+  ////// Head Section - includes meta, CSS, scripts //////
+  ////////////////////////////////////////////////////////
+  -->
+  <%- include('../Partials/head') %>
+
+  <body>
+    <!-- 
+    ////////////////////////////////////////////////////////
+    ////// Global Banner - top navigation + branding   /////
+    ////////////////////////////////////////////////////////
+    -->
+    <%- include('../Partials/banner') %>
+
+    <!-- 
+    ////////////////////////////////////////////////////////
+    ////// Search Section - holiday search bar          /////
+    ////////////////////////////////////////////////////////
+    -->
+    <%- include('../Partials/search') %>
+
+    <!-- 
+    ////////////////////////////////////////////////////////
+    ////// Info Banner - promotions or key messages     /////
+    ////////////////////////////////////////////////////////
+    -->
+    <%- include('../Partials/infobanner') %>
+
+    <!-- 
+    ////////////////////////////////////////////////////////
+    ////// Main Content: Hotel Detail Section           /////
+    ////////////////////////////////////////////////////////
+    -->
+    <section class="content-section HotelDetailContainer"> 
+
+      <!-- 
+      ////// Hotel Information Block (left-hand side) 
+      -->
+      <article class="hotelInformationContainer">
+        
+        <!-- Hotel Image -->
+        <div class="hotelImageWrapper roundedbox">
+          <img class="hotelImage" src="../../Public/assets/images/beachimage.jpeg" alt="Hotel image">
+        </div>
+
+        <!-- Hotel Name + Location -->
+        <div class="hotellocationblock flexcol">
+          <h1 class="hotelName">Atlantica Eleon Grand Resort</h1>
+          <p class="location">In Zante, Greece - <a href="#">View map</a></p>
+        </div>
+
+        <!-- Hotel Description -->
+        <p class="hotelDetailDescription">
+          The Atlantica Eleon Grand Resort offers contemporary décor, an on-the-beach location, 
+          and a choice of pools and waterslides. This property flaunts some serious good looks. 
+          We’re talking infinity pools, public areas with contemporary furniture, and stylish 
+          rooms with sea or garden-view balconies. Location is king here. The hotel occupies a 
+          spot in between an olive grove and the Ionian Sea, so the views are pretty impressive. 
+          You’re within easy reach of Tsilivi, too – it’s just a five-minute cab ride away.
+        </p>
+      </article>
+
+      <!-- 
+      ////// Trip Details Block (right-hand side)
+      -->
+      <aside class="TripDetailsContainer">
+
+        <!-- Trip Total Pricing -->
+        <div class="tripTotal">
+          <h2>Trip Total</h2>
+          <div class="priceInfo">
+            <p class="totalPrice">£2258</p>
+            <p class="pricePerPerson">£1129pp</p>
+            <p class="perPersonLabel">Per Person</p>
+          </div>
+        </div>
+
+        <!-- At a Glance Summary -->
+        <div class="glanceSection">
+          <h3>At a glance</h3>
+          <ul class="glanceList">
+            <li><span class="icon">👤</span> 2 adults</li>
+            <li><span class="icon">🧒</span> 2 children</li>
+            <li><span class="icon">📅</span> Mon 14 July 2025 - 7 nights</li>
+            <li><span class="icon">✈️</span> East Midlands - Zakynthos Airport</li>
+            <li><span class="icon">🍽️</span> All inclusive</li>
+          </ul>
+        </div>
+
+        <!-- Book Now Button -->
+        <button class="bookNowButton searchButton">Book Now</button>
+
+        <!-- Amenities List -->
+        <div class="amenitiesSection">
+          <h3>Amenities</h3>
+          <div class="amenitiesGrid">
+            <div><span class="icon">🌐</span> Internet Access</div>
+            <div><span class="icon">🏊</span> Swimming Pool</div>
+            <div><span class="icon">🍴</span> Restaurant</div>
+            <div><span class="icon">🍹</span> Bar</div>
+            <div><span class="icon">🏖️</span> Private Beach</div>
+            <div><span class="icon">💪</span> Gym</div>
+            <div><span class="icon">🎉</span> Kids Club</div>
+            <div><span class="icon">🛎️</span> Room Service</div>
+          </div>
+        </div>
+      </aside>
+
+    </section>
+
+    <!-- 
+    ////////////////////////////////////////////////////////
+    ////// Footer Section - links + contact info        /////
+    ////////////////////////////////////////////////////////
+    -->
+    <%- include('../Partials/footer') %>
+
+    <!-- 
+    ////////////////////////////////////////////////////////
+    ////// Page Scripts                                  /////
+    ////////////////////////////////////////////////////////
+    -->
+    <script src="../../Public/Javascript/togglesearch.js"></script>
+    <script src="../../Public/Javascript/getRequest.js"></script>
+    <script src="../../Public/Javascript/populateHotelDetail.js"></script>
+    <script src="../../Public/Javascript/convertDate.JS"></script>
+  </body>
+</html>

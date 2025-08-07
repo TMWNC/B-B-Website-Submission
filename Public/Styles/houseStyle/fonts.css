@@ -1,0 +1,81 @@
+
+  
+
+label{
+    font-size: clamp(0.9rem, 1.5rem, 1.2rem);
+}
+
+input, select{
+    font-size: clamp(0.9rem, 1rem, 1.2rem);
+    text-wrap: wrap;
+}
+
+h1{
+  font-size: clamp(1.2rem, 1.3rem, 2rem);
+}
+ 
+h2{
+  font-size: clamp(0.9rem, 1.1rem, 1.2rem);
+}
+
+p, li{
+  font-size: clamp(0.7rem, 0.8rem, 1.6rem);
+}
+
+@media (width >= 768px) {
+  
+ 
+label{
+    font-size: clamp(0.9rem, 1.2rem, 1.2rem);
+}
+
+input, select{
+  font-size: clamp(0.9rem, 1rem, 1.2rem);
+  text-wrap: wrap;
+}
+
+  }
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+    
+  
+  
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+
+  label{
+    font-size: clamp(0.9rem, 1.5rem, 1.1rem);
+}
+
+input, select{
+    font-size: clamp(0.9rem, 1.5rem, 1.2rem);
+    text-wrap: wrap;
+}
+
+h1{
+  font-size: clamp(1.2rem, 1.8rem, 2rem);
+}
+ 
+h2{
+  font-size: clamp(0.9rem, 1.5rem, 1.2rem);
+}
+
+
+
+p, li{
+  font-size: clamp(0.7rem, 1rem, 1.2rem);
+}
+    }
+  
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

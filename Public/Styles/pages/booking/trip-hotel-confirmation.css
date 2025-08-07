@@ -1,0 +1,94 @@
+.trip-hotel-confirmation{
+    display: grid;
+    grid-template-columns: 1fr;
+width: 100%;
+ 
+grid-template-areas:
+
+"hotelheading"
+"hotelimage"
+"hotel-detials"
+"hotel-location"
+"traveldetials";
+
+justify-items: center;
+align-items: center;
+
+row-gap: 1rem;
+
+
+grid-area: hotel-confirmation
+}
+
+
+.trip-hotel-confirmation .glanceList{
+  grid-area: traveldetials;
+  justify-self: left;
+}
+
+
+.trip-hotel-confirmation .hotelImageWrapper{
+grid-area: hotelimage;
+
+}
+
+.trip-hotel-confirmation .hotel-heading{
+
+    grid-area: hotelheading;
+    display: flex;
+ justify-self: left;
+}
+.trip-hotel-confirmation .hotel-detials{
+
+
+    
+    grid-area: hotel-detials;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+.ttrip-hotel-confirmation .hotel-detials p{
+ display: flex;
+ align-items: center;
+    justify-content: center;
+}
+
+.trip-hotel-confirmation .hotel-detials .hotel-name{
+
+     font-weight: 800;
+}
+.trip-hotel-confirmation .hotel-location{
+    grid-area: hotel-location;
+}
+@media (width >= 768px) {
+    /* Small Ipad minit size in landscape */
+
+    
+  }
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+  
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+   
+
+
+
+    }
+  
+   
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

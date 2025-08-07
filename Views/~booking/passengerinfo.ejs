@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<!-- set document to default english for UK english not US -->
+<html lang="en-GB">
+
+
+
+<%- include('../Partials/head') %>
+
+
+<body>
+  <%- include('../Partials/banner') %>
+  <%- include('../Partials/search') %>
+  <%- include('../Partials/infobanner') %>
+  <section class = "content-section passenger-detail-input-container sticky-wrapper   "> 
+
+    
+<h1 class ="PageTitle">Check Out</h1>
+
+<article class="booking-process-tracker">
+
+  <p class="pass-title">Passengers</p>
+  <p class="payment">payment</p>
+  <p class="con-title">confirmation</p>
+
+
+  <div class="flight-line">
+    
+    <span class="dot active"></span>
+    <div class="line"></div>
+   
+    <span class="dot"></span>
+    <div class="line"></div>
+    <span class="dot"></span>
+  </div>
+
+</article>
+<!-- Trip overview box-->
+
+<article class="trip-confirmation-details roundedbox">
+
+  <!-- title-->
+    <h1 class ="trip-confirmation-Title">Trip details</h1>
+
+    <!-- trip overview including dates and passenger information-->
+    <div class="trip-confirmation-overview">
+        <h2 class ="heading">Trip Overview</h2>
+     <ul class="glanceList">
+              <li><span class="icon">📩</span> 2 adults</li>
+              <li><span class="icon">📩</span> 2 children</li>
+              <li><span class="icon">📩</span> Mon 14 July 2025 - 7 nights</li>
+        </ul>
+    </div>
+
+    <!-- hotel information -->
+    <div class="trip-hotel-confirmation">
+    <h2 class ="hotel-heading">Hotel information</h2>
+    <div class="hotelImageWrapper roundedbox">
+        <img class="hotelImage" src="../../Public/assets/images/beachimage.jpeg" alt="Hotel image">
+      </div>
+      <div class ="hotel-detials flexcol">
+<div class = "flexrowinline">
+    <p class="hotel-name">test name</p>
+    <p class ="board-type">board type</p>
+</div>
+<p class="hotel-location"> in {town}, {country}</p>
+</div>
+
+<ul class="glanceList">
+  <li><span class="icon">📩</span> Check in date time</li>
+  <li><span class="icon">📩</span> Check out date time</li>
+
+</ul>
+      </div>
+
+
+       <!-- flight information -->
+<div class="trip-flight-confirmation">
+  <h2 class ="heading">Flights </h2>
+  <ul class="glanceList">
+           <li><span class="icon">📩</span> Outbound - date time MAN - ZAN</li>
+           <li><span class="icon">📩</span> Inbound - date time ZAN - MAN</li>
+           <li><span class="icon">📩</span> Premium Economy</li>
+     </ul>
+</div>
+
+
+
+ <!-- price -->
+ <div class="trip-costing-confirmation">
+ 
+ 
+  <div class="flexrowinline"> 
+    <p class=""> Total price </p>
+    <p class="totalPrice"> £2500</p>
+  </div>
+</div>
+  
+
+
+</article>
+ 
+
+
+    <h1 class = "subheading">Passenger Information</h1>
+ 
+    <article class ="passenger-passport-notice">
+      <h2>Passenger information</h2>
+      <p>please note for flight and hotel security reasons, first and surname for all passengers must  match their passport. </p>
+  </article>
+      
+<div class="passenger-Wrapper">
+  <article class ="passenger-input-box lead-passenger">
+
+    <div class="flexrowinline"> 
+      <h1> Adult 1 </h1>
+      <p>lead passenger</p>
+    </div>
+
+
+    <p>This passenger will recieve all correspondance about the booking</p>
+
+<div class = "input-wrapper">
+
+
+  <div class="form-row">
+  <label for="title">Title</label>
+  <select id="title" name="title">
+    <option value="">Please select</option>
+    <option value="mr">Mr</option>
+    <option value="mrs">Mrs</option>
+    <option value="miss">Miss</option>
+    <option value="ms">Ms</option>
+    <option value="dr">Dr</option>
+    <option value="prof">Prof</option>
+    <option value="mx">Mx</option>
+  </select>
+</div>
+
+
+<div class="form-row">
+  <label for="first-name">First name</label>
+  <input id="first-name" name="first-name" type="text" />
+</div>
+
+<div class="form-row">
+  <label for="surname">Surname</label>
+  <input id="surname" name="surname" type="text" />
+</div>
+
+ <div class="form-row">
+
+
+  <label for="dob">Date of birth</label>
+  <input id="dob" name="dob" type="date" />
+  </div>
+
+
+
+
+<div class="form-row">
+  <label for="address1">Address line 1</label>
+  <input id="address1" name="address1" type="text" />
+</div>
+ 
+
+<div class="form-row">
+  <label for="address2">Address line 2</label>
+  <input id="address2" name="address2" type="text" />
+</div>
+ 
+
+<div class="form-row">
+  <label for="postcode">Postcode</label>
+  <input id="postcode" name="postcode" type="text" />
+
+</div>
+<div class="form-row">
+  <label for="mobile">Mobile phone</label>
+  <input id="mobile" name="mobile" type="tel" />
+
+</div>
+
+<div class="form-row">
+  <label for="email">E-mail address</label>
+  <input id="email" name="email" type="email" />
+</div>
+
+<div class="form-row ">
+  <label for="accessibility-needed">Accessibility support needed </label>
+
+  <select id="accessibility-needed" name="accessibility-needed">
+    <option value="">Please select</option>
+    <option value="1">yes</option>
+    <option value="0">No</option>
+  </select>
+</div>
+
+
+
+ <div class="form-row">
+  <label for="access-req">Accessibility requests</label>
+  <textarea id="access-req" name="access-req" rows="4" placeholder="Enter any accessibility needs here..."></textarea>
+
+</div>
+
+</div>
+</article>
+
+<article class ="passenger-input-box passenger">
+
+    <h1> Adult 2 </h1>
+  
+
+<div class = "input-wrapper">
+
+
+<div class="form-row">
+<label for="title">Title</label>
+<select id="title" name="title">
+  <option value="">Please select</option>
+  <option value="mr">Mr</option>
+  <option value="mrs">Mrs</option>
+  <option value="miss">Miss</option>
+  <option value="ms">Ms</option>
+  <option value="dr">Dr</option>
+  <option value="prof">Prof</option>
+  <option value="mx">Mx</option>
+</select>
+</div>
+
+
+<div class="form-row">
+<label for="first-name">First name</label>
+<input id="first-name" name="first-name" type="text" />
+</div>
+
+<div class="form-row">
+<label for="surname">Surname</label>
+<input id="surname" name="surname" type="text" />
+</div>
+
+<div class="form-row">
+
+
+<label for="dob">Date of birth</label>
+<input id="dob" name="dob" type="date" />
+</div>
+
+
+</div>
+</article>
+</div>
+
+</section>
+
+
+    <section class ="content-section ">
+      <button class="viewMoreButton button-proceed" data-hotel-id="1">proceed to payment</button>
+    </section>
+
+ 
+  <%- include('../Partials/footer') %>
+
+<script src="../../Public/Javascript/togglesearch.js"></script>
+<script src="../../Public/Javascript/PassengersValidation.js"></script>
+<script src="../../Public/Javascript/stickyStop.js"></script>
+</body>
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <%- include('../Partials/head') %>
+<body>
+  <%- include('../Partials/banner') %>
+
+  <section class="content-section ">
+<h1> Company Dashboard</h1>
+    <div class ="GraphRow">
+      
+      <div id = "Branch-ComparisonContainer" class="chart">
+        <h3 class="chart-title">Company Monthly Sales (last 30 Days)</h3>
+        <div id="Branch-Comparison"></div>
+      </div>
+
+
+ 
+  <div class ="chart">
+
+    <h2>Top hotel by branch</h2>
+  <ul class="Saleslist">
+    <li class="Saleslistitem heading">
+      <h4> Location </h3>
+      <h4> Top Hotels </h3>
+      <h4> Lowest Sales hotels </h3>
+    </li>
+<li class="Saleslistitem salerow">
+  <h3> city </h3>
+ <ul class="SalesItemList topsales">
+  <li> hotel</li>
+  <li> hotel</li>
+  <li> hotel</li>
+ </ul>
+ <ul class="SalesItemList lowestSales">
+  <li> hotel</li>
+  <li> hotel</li>
+  <li> hotel</li>
+ </ul>
+</li>
+<li class="Saleslistitem salerow">
+  <h3> city </h3>
+ <ul class="SalesItemList topsales">
+  <li> hotel</li>
+  <li> hotel</li>
+  <li> hotel</li>
+ </ul>
+ <ul class="SalesItemList lowestSales">
+  <li> hotel</li>
+  <li> hotel</li>
+  <li> hotel</li>
+ </ul>
+</li>
+<li class="Saleslistitem salerow">
+  <h3> city </h3>
+ <ul class="SalesItemList topsales">
+  <li> hotel</li>
+  <li> hotel</li>
+  <li> hotel</li>
+ </ul>
+ <ul class="SalesItemList lowestSales">
+  <li> hotel</li>
+  <li> hotel</li>
+  <li> hotel</li>
+ </ul>
+</li>
+
+  </ul>  
+  
+  </div>
+   
+  <div  class ="chart"  >
+    <h2>Trending over last 30 days</h2>
+    <table id = "trending" class="trending-table">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Town</th>
+          <th>Current Bookings</th>
+          <th>Previous Bookings</th>
+          <th>Change</th>
+          <th>% Change</th>
+        </tr>
+      </thead>
+      <tbody id="trending-body">
+        <!-- Table body -->
+      </tbody>
+    </table>
+
+  </div>
+      </div>
+ 
+  <div class ="GraphRow">
+    <div class="chart">
+      <h3 class="chart-title">Company Monthly Sales (last 30 Days)</h3>
+      <div id="chart"></div>
+    </div>
+
+    <div class="chart">
+      <h3 class="chart-title"> Company Yearly Sales (last 12 months)</h3>
+      <div id="yearly-sales"></div>
+    </div>
+   
+ 
+  </div>
+  
+  </section>
+
+  <%- include('../Partials/footer') %>
+  <script src="../../Public/js/d3.v7.min.js"></script>
+  <script src="../../Public/Javascript/D3/GenerateGraphs.js"></script>
+</body>
+</html>

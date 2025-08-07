@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<!-- set document to default english for UK english not US -->
+<html lang="en-GB">
+
+
+
+<%- include('../Partials/head') %>
+
+
+<body>
+  <%- include('../Partials/banner') %>
+  <%- include('../Partials/search') %>
+ 
+
+  <%- include('../Partials/infobanner') %>
+ 
+<!-- section to contain all search items-->
+  <section class="Hotel-Search-Container content-section">
+
+    <p id="holiday-filter-Title">filters </p>
+    <p id="holiday-number">holidays found </p>
+
+    
+    
+    <div  class="sort-orderContainer">
+   
+    <select class="sort">
+      <option>low-high</option>
+      <option>high-low</option>
+    </select>
+
+    <select  class="numOfadults">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+    <select  class="numChildren">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+
+  </div>
+    <!-- aside will be used to store search filters pulled from the get request-->
+<aside class="search-filters">
+  
+<div>
+  <button class="close-filters-btn" id="close-filters-btn">&times;</button>
+<!-- filter groups are in divs which contain the heading and check boxes for each item-->
+    <div class="filter-group board-filter">
+
+
+   
+
+
+        <h3>Board</h3>
+        <label><input type="checkbox" /> Bed and Breakfast (5)</label>
+        <label><input type="checkbox" /> Self-Catering (20)</label>
+        <label><input type="checkbox" /> All Inclusive (75)</label>
+        <label><input type="checkbox" /> Half-board (20)</label>
+      </div>
+    
+      <div class="filter-group">
+        <h3>Max Price: £<span id="price-value">3800</span></h3>
+        <input type="range" id="max-price" min="0" max="3800" step="100" />
+      </div>
+    
+      <div class="filter-group destination-filter">
+        <h3>Destination</h3>
+        <label><input type="checkbox" /> Crete</label>
+        <label><input type="checkbox" /> Ionic Islands</label>
+        <label><input type="checkbox" /> Athens</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Destination</h3>
+        <label><input type="checkbox" /> Crete</label>
+        <label><input type="checkbox" /> Ionic Islands</label>
+        <label><input type="checkbox" /> Athens</label>
+      </div>
+
+
+      
+
+    </div>
+
+
+</aside>
+
+<!-- this will hold the cards for the actual search results-->
+<div class = "hotel-search-results">
+
+
+  <!-- Test item 1 -->
+  <article class="hotelListItem roundedbox">
+
+    <div class="hotelImageWrapper roundedbox">
+    <img class="hotelImage" src="../../Public/assets/images/beachimage.jpeg" alt="Hotel image">
+  </div>
+
+
+    <div class ="hotellocationblock flexcol">
+    <h1 class="hotelName">Atlantica Eleon Grand Resort</h1>
+    <p class="location">&#128205;&nbsp; In Zante, Greece - <a href="#">View map</a></p>
+  </div>
+
+    <div class="travelInfoBlock">
+      <p class="dates"> &#128197;&nbsp; Mon 14 July 2025 - 7 nights</p>
+      <p class="airport">&#9992;&nbsp; East Midlands - Zakynthos Airport</p>
+    </div>
+
+    <div class="priceBlock">
+
+      <div class="flexrowinline">
+      <p class="pricePerPerson">£1129pp </p>
+      <p class="boardType">(All Inclusive)</p>
+    </div>
+      <p class="totalPrice">£2258 total price</p>
+      <button class="viewMoreButton" data-hotel-id="1">Continue</button>
+    </div>
+
+  
+  </article>
+
+
+  <!-- Test item 1 -->
+  <article class="hotelListItem roundedbox">
+    <div class="hotelImageWrapper roundedbox">
+    <img class="hotelImage" src="../../Public/assets/images/beachimage.jpeg" alt="Hotel image">
+  </div>
+
+    <div class ="hotellocationblock flexcol">
+    <h2 class="hotelName">Atlantica Eleon Grand Resort</h2>
+    <p class="location">In Zante, Greece - <a href="#">View map</a></p>
+  </div>
+
+    <div class="travelInfoBlock">
+      <p class="dates">Mon 14 July 2025 - 7 nights</p>
+      <p class="airport"> &#9992;&nbsp; East Midlands - Zakynthos Airport</p>
+    </div>
+
+    <div class="priceBlock">
+
+      <div class="flexrowinline">
+      <p class="pricePerPerson">£1129pp </p>
+      <p class="boardType">(All Inclusive)</p>
+    </div>
+      <p class="totalPrice">£2258 total price</p>
+      <button class="viewMoreButton" data-hotel-id="1">Continue</button>
+    </div>
+  </article>
+
+  
+
+</div>
+
+  </section>
+
+
+  <%- include('../Partials/footer') %>
+
+
+  </footer>
+  <script src="../../Public/Javascript/togglesearch.js"></script>
+<script src="../../Public/Javascript/togglefilters.js"></script>
+<script src="../../Public/Javascript/getRequest.js"></script>
+<script src="../../Public/Javascript/populateHotelList.js"></script>
+<script src="../../Public/Javascript/convertDate.JS"></script>
+
+
+</body>
+

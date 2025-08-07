@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<!-- set document to default english for UK english not US -->
+<html lang="en-GB">
+
+
+
+<%- include('../Partials/head') %>
+
+
+<body>
+  <%- include('../Partials/banner') %>
+  <%- include('../Partials/search') %>
+  <%- include('../Partials/infobanner') %>
+  <section class = "content-section passenger-detail-input-container sticky-wrapper   "> 
+
+    
+<h1 class ="PageTitle">Check Out</h1>
+
+<article class="booking-process-tracker">
+
+  <p class="pass-title">Passengers</p>
+  <p class="payment">payment</p>
+  <p class="con-title">confirmation</p>
+
+
+  <div class="flight-line">
+    
+    <span class="dot complete"></span>
+    <div class="line complete"></div>
+   
+    <span class="dot complete"></span>
+    <div class="line Complete"></div>
+    <span class="dot inprogress"></span>
+  </div>
+
+</article>
+<!-- Trip overview box-->
+
+<article class="trip-confirmation-details roundedbox">
+
+  <!-- title-->
+    <h1 class ="trip-confirmation-Title">Trip details</h1>
+
+    <!-- trip overview including dates and passenger information-->
+    <div class="trip-confirmation-overview">
+        <h2 class ="heading">Trip Overview</h2>
+     <ul class="glanceList">
+              <li><span class="icon">👤</span> <%= bookinginfo.numOfAdults%> adults</li>
+              <li><span class="icon">🧒</span> <%= bookinginfo.numOfChildren%> children</li>
+              <% if (typeof outbound !== 'undefined' && outbound !== null) { %>
+              <li><span class="icon">📅</span><%= outbound.dateOfTravel%> - <%= bookinginfo.numOfNights%> nights</li>
+              <%  }  else {%>
+
+                <li><span class="icon">📅</span>  <%= bookinginfo.numOfNights%> nights</li>
+                <%  }  %>
+        </ul>
+    </div>
+
+    <!-- hotel information -->
+    <div class="trip-hotel-confirmation">
+      <% if (typeof hotelinformation !== 'undefined' && hotelinformation !== null) { %>
+    <h2 class ="hotel-heading">Hotel information</h2>
+    <div class="hotelImageWrapper roundedbox">
+      <img class="hotelImage" src="<%= hotelinformation[0].HotelImageURL %>" alt="Hotel image">
+      </div>
+      <div class ="hotel-detials flexcol">
+<div class = "flexrowinline">
+    <p class="hotel-name"><%= hotelinformation[0].HotelName%> </p>
+    <p class ="board-type"><%= hotelinformation[0].BoardTypeName%></p>
+</div>
+<p class="hotel-location"> in <%= hotelinformation[0].TownName%>, <%= hotelinformation[0].CountryName%></p>
+</div>
+<%  } %>
+<ul class="glanceList">
+ 
+ 
+  <% if (typeof outbound !== 'undefined' && outbound !== null) { %>
+    <% if ( bookinginfo.typeOfBooking == 2) { %>
+    
+      <%  } else{ %>
+
+        <li><span class="icon">🏨</span> Check in <%=outbound.dateOfTravel%></li>
+        <li><span class="icon">🏨</span> Check out <%= inbound.dateOfTravel%></li>
+        <%  }  %>
+ 
+  <%  } %>
+
+  <% if (typeof hotelinformation !== 'undefined' && hotelinformation !== null) { %>
+  <li><span class="icon">🛏️</span> Number of Rooms <%= hotelcosts.numberofRooms%></li>
+  <% if(hotelcosts != null) { %>
+    <li class="flights"> hotel price: <strong> £<%= hotelcosts.costoverall%></strong> </li>
+    <%  } %>
+    <%  } %>
+
+ 
+</ul>
+      </div>
+
+      <% if (typeof outbound !== 'undefined' && outbound !== null) { %>
+       <!-- flight information -->
+<div class="trip-flight-confirmation">
+  <h2 class ="heading">Flights </h2>
+  <ul class="glanceList">
+           <li><span class="icon">✈️</span> Outbound - <%=outbound.dateOfTravel%> <%=flightoutinfo[0].TakeOffTime%> <%=flightoutinfo[0].OriginShort%> - <%=flightoutinfo[0].DestinationShort%></li>
+           <li><span class="icon">✈️</span> Inbound -  <%= inbound.dateOfTravel%>  <%=flightIninfo[0].TakeOffTime%> <%=flightIninfo[0].OriginShort%> - <%=flightIninfo[0].DestinationShort%></li>
+           <% if (airtravelprice != null) { %>
+            <li class="flights"> flight price:<strong> £<%= airtravelprice.totalcost%></strong> </li>
+            <%  } %>
+     </ul>
+</div>
+<%  } %>
+
+
+ <!-- price -->
+ <div class="trip-costing-confirmation">
+
+    <div class="flexrowinline"> 
+        <p class=""> Total price </p>
+    <p class="totalPrice"> £<%= holidaytotal%></p>
+</div>
+</div>
+  
+
+
+</article>
+ 
+
+
+    <h1 class = "subheading">Booking Confirmation</h1>
+ 
+      
+<div class="passenger-Wrapper">
+  <article class ="passenger-input-box payment">
+
+ 
+      <h1> Booking reference   <%= bookingID%> </h1>
+
+
+</article>
+
+
+</section>
+
+
+    <section class ="content-section ">
+
+    </section>
+
+ 
+  <%- include('../Partials/footer') %>
+
+<script src="../../Public/Javascript/togglesearch.js"></script>
+<script src="../../Public/Javascript/Payment.js"></script>
+</body>
+

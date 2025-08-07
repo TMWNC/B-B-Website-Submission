@@ -1,0 +1,100 @@
+.GraphRow{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+column-gap: 1em;
+row-gap: 1em;
+min-height: 20rem;
+margin-bottom: 3rem;
+width: 80%;
+justify-self: center;
+}
+
+.chart{
+    display: flex;
+    background-color: var(--AccentGreyColour);
+    border-radius: 2rem;
+    padding: 1em;
+ flex-direction: column;
+ row-gap: 1em;
+ justify-items: center;
+
+}
+
+.chart-title{
+text-align: center;
+margin:1em;
+}
+
+.chart-container{
+justify-items: center;
+justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.line-label {
+    font-weight: bold;
+    pointer-events: none; /* lets mouse events pass through */
+  }
+
+#Branch-ComparisonContainer{
+    
+  }
+
+
+
+
+  .Saleslist{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: palegoldenrod;
+    row-gap: 2em;
+  }
+  .Saleslistitem{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .SalesItemList{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .trending-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background: #f8f3b2;
+  }
+  
+  .trending-table th, 
+  .trending-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .trending-table th {
+    background: #d9c75d;
+    font-weight: bold;
+  }
+  
+  .trending-table td.positive {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .trending-table td.negative {
+    color: red;
+    font-weight: bold;
+  }
+  

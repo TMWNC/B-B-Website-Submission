@@ -1,0 +1,8 @@
+.flight-list-Wrapper{
+margin-top:3rem;
+width: 90%;
+justify-self: center;
+display: grid;
+row-gap: 3em;
+
+}

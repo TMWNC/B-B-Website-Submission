@@ -1,0 +1,8 @@
+.sticky-wrapper {
+  position: relative; 
+}
+
+.sticky{
+  position:sticky;
+  top:10px
+}

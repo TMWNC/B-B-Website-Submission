@@ -1,0 +1,69 @@
+.date-bar-wrapper {
+    margin-top: 3em;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+justify-content: center;
+    background-color: pink;
+  }
+
+
+  .date-bar-wrapper.hidden{
+    display: none;
+  }
+.date-bar{
+  
+    border-style: solid;
+border-color: black;
+border-width: 0.1em 0 0.1em 0; /* top, right, bottom, left */
+    display: inline-flex;
+    width: 90%;
+
+    list-style-type: none;
+    height: 5rem;
+    background-color: white;
+   
+ overflow: hidden;
+    padding: 0%;
+    margin: 0;
+    flex-wrap: nowrap;
+    white-space: nowrap
+}
+
+.date-bar li{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    min-width: 8rem; /* Adjust based on design */
+
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.date-bar li.selected{
+    background-color: green;
+}
+
+.date-bar li.unavailable{
+    background-color: grey;
+    cursor:default;
+}
+
+.scroll-btn {
+width:5%;
+height: 100%;
+display: block;
+    background-color: #004e76;
+    color: white;
+    font-size: 2rem;
+    
+    border: none;
+    cursor: pointer;
+
+  }
+  
+ 

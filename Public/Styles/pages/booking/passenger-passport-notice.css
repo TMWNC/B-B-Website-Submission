@@ -1,0 +1,45 @@
+.passenger-passport-notice{
+margin-top:1rem;
+    background-color: var(--PrimaryBrandColour);
+    color: var(--fontWhite);
+    padding: 1rem;
+display: flex;
+flex-direction: column;
+row-gap: 0.5rem;
+
+}
+
+
+
+
+
+
+@media (width >= 768px) {
+    /* Small Ipad minit size in landscape */
+
+    
+  }
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+  
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+   
+
+
+
+    }
+  
+   
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

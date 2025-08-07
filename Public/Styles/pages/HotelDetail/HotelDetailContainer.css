@@ -1,0 +1,161 @@
+.HotelDetailContainer{
+   
+    justify-self: center;
+    width: 90%;
+    height:auto;
+   
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows:auto;
+    margin: auto;
+
+
+    grid-template-areas:
+
+    "hotelinfo"
+    "tripDetails";
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+
+}
+
+
+.TripDetailsContainer {
+  justify-self: center;
+  position: sticky;
+  top: 1rem;
+  background-color: var(--AccentGreyColour);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+
+  }
+
+
+.hotelInformationContainer{
+    padding: 1em;
+    grid-area: hotelinfo;
+
+    height:auto;
+   
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows:auto;
+  margin-bottom: 1em;
+  gap: 2rem;  
+  grid-template-areas:
+  "hotelimage"
+  "hotellocationblock"
+  "hotelDescription";
+}
+
+
+
+.hotelInformationContainer .hotellocationblock{
+    grid-area: hotellocationblock
+}
+
+.hotelInformationContainer .hotelImageWrapper{
+    grid-area: hotelimage;
+    width: 100%;
+}
+
+.hotelInformationContainer .hotelDetailDescription{
+    grid-area: hotelDescription
+}
+
+.tripTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.totalPrice {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.pricePerPerson {
+  font-size: 1rem;
+  text-align: right;
+}
+
+.perPersonLabel {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.glanceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  color: #444;
+}
+
+.bookNowButton {
+  align-self: flex-end;
+ 
+}
+
+.amenitiesSection h3 {
+  margin-bottom: 0.5rem;
+}
+
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+}
+
+
+
+@media (width >= 768px) {
+    /* Small Ipad minit size in landscape */
+
+    .HotelDetailContainer{
+   
+       
+        width: 90%;
+        grid-template-columns: 0.6fr 0.4fr ;
+        grid-template-areas:   
+        "hotelinfo tripDetails ";
+      margin-bottom: 1rem;
+      margin-top: 3rem;
+    
+    }
+  }
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+   
+  
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+    
+
+  
+    }
+  
+   
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

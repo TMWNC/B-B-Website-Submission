@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <%- include('../Partials/head') %>
+<body>
+  <%- include('../Partials/banner') %>
+
+  <section class="content-section ">
+
+    <div class ="GraphRow">
+      
+  <div class ="chart"> </div>
+  <div class ="chart"> </div>
+  <div class ="chart"> </div>
+  
+      </div>
+
+  <div class ="GraphRow">
+    <div class="chart">
+      <h3 class="chart-title">Monthly Sales (last 30 Days)</h3>
+      <div id="chart"></div>
+    </div>
+
+    <div class="chart">
+      <h3 class="chart-title">Yearly Sales (last 12 months)</h3>
+      <div id="yearly-sales"></div>
+    </div>
+   
+    <div  class ="chart"  id="chart"></div>
+  </div>
+  
+  </section>
+
+  <%- include('../Partials/footer') %>
+  <script src="../../Public/js/d3.v7.min.js"></script>
+  <script src="../../Public/Javascript/D3/GenerateGraphs.js"></script>
+</body>
+</html>

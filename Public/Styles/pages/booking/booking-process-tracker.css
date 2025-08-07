@@ -1,0 +1,74 @@
+.booking-process-tracker{
+
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.2fr auto;
+    grid-template-areas: 
+    "pass  pay  con"
+    "line   line     line";
+    min-height: 5rem;
+    justify-content: center;
+    justify-items: center;
+  
+    background-color: var(--AccentGreyColour);
+    text-align: center;
+}
+.booking-process-tracker p{
+    display: flex;
+   
+    align-items: center;
+}
+
+.booking-process-tracker .pass-title{
+grid-area: pass;
+justify-content: left;
+}
+
+.booking-process-tracker .payment{
+    grid-area:  pay;
+    justify-content: center;
+}
+
+.booking-process-tracker .con-title{
+    grid-area: con;
+    justify-content: right;
+}
+
+
+
+.booking-process-tracker .flight-line {
+    padding-top: 1em;
+    grid-area: line;
+    display: flex;
+    align-self: flex-start;
+    justify-items: center;
+  
+    width: 70%;
+  }
+  
+  .line {
+    flex: 1;
+    height: 2px;
+    background-color: black;
+    
+  }
+  
+  .dot {
+   
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    
+  }
+
+
+  .complete{
+    background-color: green;
+  }
+
+  .inprogress{
+    background-color: yellow;
+    border: 0.1em solid black;
+  }

@@ -1,0 +1,60 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "Edit Routine",
+    "content": "DELIMITER %%\r\nDROP PROCEDURE `BBWebsite`.`GetFlightList`%%\r\nCREATE DEFINER=`man106271`@`%` PROCEDURE `BBWebsite`.`GetFlightList`(IN FlightDate VARCHAR(10), IN OriginID INT)\r\nBEGIN\r\n\r\n DECLARE actualDay VARCHAR(10);\r\n    SET actualDay = DAYNAME(STR_TO_DATE(FlightDate, '%d/%m/%Y'));\r\n\r\n\r\n   SELECT \r\n    TblFlightsTimeTable.DayOfWeek,\r\n    TblFlightsTimeTable.TakeOffTime,\r\n    TblFlightsTimeTable.FlightTime,\r\n    TblFlightsTimeTable.AdultPrice,\r\n    TblFlightsTimeTable.ChildPrice,\r\n    TblFlightsDetails.FlightNum,\r\n    \r\n    OriginAirport.AirportName AS OriginAirportName,\r\n    OriginAirport.AirportLat AS OriginLat,\r\n    OriginAirport.AirportLong AS OriginLong,\r\n    OriginAirport.AirportShortName AS OriginShort,\r\n\r\n    DestinationAirport.AirportName AS DestinationAirportName,\r\n    DestinationAirport.AirportLat AS DestinationLat,\r\n    DestinationAirport.AirportLong AS DestinationLong,\r\n    DestinationAirport.AirportShortName AS DestinationShort,\r\n\r\n    TblCountry.CountryName,\r\n    TblFlightOperator.OperatorName\r\n\r\nFROM TblFlightsTimeTable\r\nINNER JOIN TblFlightsDetails \r\n    ON TblFlightsTimeTable.FlightID = TblFlightsDetails.FlightID\r\nINNER JOIN TblFlightOperator \r\n    ON TblFlightsDetails.OperatorID = TblFlightOperator.OperatorID\r\nINNER JOIN TblAirports AS OriginAirport \r\n    ON TblFlightsDetails.OriginAirportID = OriginAirport.AirportID\r\nINNER JOIN TblAirports AS DestinationAirport \r\n    ON TblFlightsDetails.DestinationAirportID = DestinationAirport.AirportID\r\nINNER JOIN TblCountry \r\n    ON OriginAirport.CountryID = TblCountry.CountryID\r\n\r\n WHERE TblFlightsTimeTable.DayOfWeek = DAYNAME(actualDay);\r\n\r\n\r\nEND%%\r\nDELIMITER ;",
+    "options": {
+        "tabSize": 4,
+        "insertSpaces": true,
+        "indentSize": 4,
+        "defaultEOL": "CRLF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": null,
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 47,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 1,
+                            "resultId": "a73c1593-b26f-41d4-a244-bbd51417b34a",
+                            "content": "OK, 0 records retrieved in 115.115ms"
+                        },
+                        {
+                            "type": 2,
+                            "index": 2,
+                            "resultId": "ee7febde-3000-4b34-e0b7-55a6a8dcca53",
+                            "content": "OK, 0 records retrieved in 80.419ms"
+                        },
+                        {
+                            "type": 5,
+                            "index": -1,
+                            "content": "✓ SQL Script execution completed in 230ms. 2 statements executed successfully.",
+                            "language": "ansi"
+                        }
+                    ]
+                },
+                "currentHeight": 300,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 1645
+                        },
+                        "contentStart": 0,
+                        "state": 4
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+.trip-confirmation-overview{
+display: grid;
+row-gap: 1em;
+justify-items: left;
+grid-template-columns: 1fr;
+
+width: 100%;
+}
+
+.trip-confirmation-overview h2{
+   display: flex;
+    justify-self: left;
+}

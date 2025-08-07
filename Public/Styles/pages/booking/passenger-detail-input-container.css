@@ -1,0 +1,117 @@
+.passenger-detail-input-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: no-grow;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-areas: 
+  "pageTitle"
+  "BookingprocessTracker"
+  "tripConfirmation"
+  "subheading"
+  "passportnotice"
+  "passenger-wrapper";
+  min-height: 150vh;
+}
+
+.passenger-input-box {
+  width: 100%;
+}
+
+
+
+.PageTitle{
+  grid-area: pageTitle
+}
+
+.booking-process-tracker{
+  grid-area:BookingprocessTracker;
+}
+
+.trip-confirmation-details{
+  grid-area: tripConfirmation;
+}
+
+.subheading{
+  grid-area: subheading;
+}
+
+.passenger-passport-notice{
+  grid-area: passportnotice;
+}
+
+.passenger-Wrapper{
+  display: flex;
+  flex-direction: column;
+  grid-area: passenger-wrapper;
+}
+
+@media (width >= 768px) {
+    /* Small Ipad minit size in landscape */
+
+    .trip-confirmation-details {
+      max-height: 55rem;
+     }
+     .passenger-detail-input-container {
+       display: grid;
+       grid-template-columns: 2fr 1fr 0.7fr;
+       grid-template-rows: auto auto auto auto;
+       column-gap: 2rem;
+       row-gap: 2rem;
+       width: 90%;
+       margin: 3rem auto;
+       grid-template-areas:
+         "pageTitle BookingprocessTracker BookingprocessTracker"
+         "subheading tripConfirmation tripConfirmation"
+         "passportnotice tripConfirmation tripConfirmation"
+         "passenger-wrapper tripConfirmation tripConfirmation";
+     }
+   
+   
+  }
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+    .trip-confirmation-details {
+      max-height: 58rem;
+     }
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+  
+  .trip-confirmation-details {
+   max-height: 50rem;
+  }
+  .passenger-detail-input-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.3fr;
+    grid-template-rows: auto auto auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    width: 90%;
+    margin: 3rem auto;
+    grid-template-areas:
+      "pageTitle BookingprocessTracker BookingprocessTracker"
+      "subheading tripConfirmation tripConfirmation"
+      "passportnotice tripConfirmation tripConfirmation"
+      "passenger-wrapper tripConfirmation tripConfirmation";
+  }
+
+
+
+
+
+    }
+  
+   
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

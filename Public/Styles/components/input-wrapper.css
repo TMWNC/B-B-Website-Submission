@@ -1,0 +1,67 @@
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--AccentGreyColour);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: left;
+    gap: 1rem;
+  }
+  .form-row textarea{
+ width: 100%;
+  }
+  
+
+  .input-error {
+    border: 2px solid red;
+    background-color: #fff0f0;
+    color: red;
+  }
+
+  
+@media (width >= 768px) {
+    /* Small Ipad minit size in landscape */
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        gap: 1rem;
+      }
+    
+  }
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+  
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+   
+
+
+
+    }
+  
+   
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

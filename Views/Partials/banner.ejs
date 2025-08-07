@@ -1,0 +1,50 @@
+<header>
+
+
+
+  <div class = "logoContainer">
+    <img src="../../Public/assets/images/Logo maker project (3).png" alt ="B&B logo">
+  </div>
+
+
+
+
+    <!-- Burger menu set up -->
+    <!-- use a hidden check box which is accessed within the CSS -->
+ <input type="checkbox" id="burgercheck">
+      <label id="burger" for="burgercheck">
+        <!-- Each div is a line in the burger-->
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+
+    
+    <!-- Start of navigation items -->
+    <nav>
+      </div>
+     
+<ul>
+  <li><a href="../../home"> Home</a></li>
+  <li><a href="../../search"> Holidays</a></li>
+  <li><a href="../../search/flights"> Flights</a></li>
+  <li><a href="../../search/hotel?numOfNights=3&adult=1&child=0&type=1&date=2025-07-28&originID=1"> Hotels</a></li>
+
+
+  <% if (isloggedin && !isStaff) { %>    
+    <li><a href="../../account/bookings">Bookings</a></li>
+    <li><a>Hello <%= userName %></a></li>
+    <li><a href="../../auth/logout">Log out</a></li>
+  <% } else if (isloggedin && isStaff) { %>    
+    <li><a href="../../admin">stats</a></li>
+    <li><a>Hello <%= userName %></a></li>
+    <li><a href="../../auth/logout">Log out</a></li>
+  <% } else { %>
+    <li><a href="../../auth/login">Sign In</a></li>
+  <% } %>
+  
+</ul>
+    </nav>
+  </header>
+
+ 

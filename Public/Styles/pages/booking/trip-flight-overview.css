@@ -1,0 +1,14 @@
+.trip-flight-confirmation{
+display: grid;
+row-gap: 1em;
+justify-items: left;
+grid-template-columns: 1fr;
+
+width: 100%;
+
+}
+
+.trip-flight-confirmation h2{
+   display: flex;
+    justify-self: left;
+}

@@ -1,0 +1,43 @@
+.searchButton{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 3rem;
+    background-color: var(--buttonUp);
+    color: var(--fontBlack);
+    cursor: pointer;
+
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.CreateAccountButton{
+    width: 24em;
+    height: 3rem;
+    border-radius: 3rem;
+    background-color: var(--buttonUp);
+    color: var(--fontBlack);
+    cursor: pointer;
+
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.CreateAccountButton:hover,.searchButton:hover{
+    background-color: var(--buttonHover);
+}
+
+
+.button-proceed{
+    display: flex;
+    justify-self: center;
+    width: 18rem;
+    text-align: center;
+    justify-content: center;
+margin-bottom: 1em;
+}

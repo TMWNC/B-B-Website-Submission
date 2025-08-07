@@ -1,0 +1,119 @@
+.Hotel-Search-Container{
+    
+ 
+    justify-self: center;
+    width: 100%;
+    height:auto;
+    background-color: var(--AccentGreyColour);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.1fr auto;
+
+
+    grid-template-areas:
+    "filtertitle holnum sortorder"
+    "hotelresults hotelresults hotelresults";
+}
+
+.sort-orderContainer{
+margin-right: 1em;
+    justify-self: center;
+    grid-area: sortorder;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.3fr 0.4fr;
+}
+.sort-orderContainer select, .sort-orderContainer p{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#holiday-filter-Title{
+    padding-top: 1em;
+    grid-area: filtertitle;
+    justify-self: center;
+    align-self: center;
+
+}
+#holiday-number{
+    padding-top: 1em;
+    grid-area: holnum;
+    justify-self: left;
+    align-self: center;
+}
+
+#sort-order{
+    display: none;
+    padding-top: 1em;
+    justify-self: center;
+    align-self: center;
+}
+
+.search-filters{
+
+    grid-area: hotelfilters;
+}
+
+.hotel-search-results{
+    grid-area: hotelresults;
+    
+  
+}
+
+
+
+
+
+@media (width >= 768px) {
+    /* Small Ipad minit size in landscape */
+
+    
+  }
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+  
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+    
+  #sort-order{
+    display: flex;
+    padding-top: 1em;
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+.Hotel-Search-Container{
+ 
+    justify-self: center;
+    width: 100%;
+    height:auto;
+    background-color: var(--AccentGreyColour);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.1fr auto;
+
+
+    grid-template-areas:
+
+    "filtertitle holnum sortorder"
+    "hotelfilters hotelresults hotelresults";
+}
+  
+    }
+  
+   
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

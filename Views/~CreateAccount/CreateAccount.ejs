@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<!-- set document to default english for UK english not US -->
+<html lang="en-GB">
+<%- include('../Partials/head') %>
+<body>
+  <%- include('../Partials/banner') %>
+  <%- include('../Partials/search') %>
+ 
+  <section class = "content-section  "> 
+ </section>
+
+  <form  action="../../auth/createAccount" method="POST"class = "CreateForm hardbox">s
+    <input type="hidden" name="redirect" value="<%= redirect %>">
+    <h1>Create Account</h1>
+
+    <div class = "form-row"> 
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+      
+    </div>
+
+    <div class = "form-row"> 
+
+        <label for="FName">First Name</label>
+        <input type="Text" id="FName" name="FName" placeholder="First Name">
+      
+    </div>
+
+    <div class = "form-row"> 
+
+        <label for="SName">Surname</label>
+        <input type="Text" id="SName" name="SName" placeholder="Surname">
+      
+    </div>
+
+
+    <div class = "form-row"> 
+
+        <label for="Password">Password</label>
+        <input type="password" id="Password" name="Password" placeholder="Password">
+     
+      
+    </div>
+
+    <% if (error_msg) { %>
+      <p> <%= error_msg %></p>
+    <% } %>
+    <button type ="submit" class="CreateAccountButton" >Create Account</button>
+
+    <a href="../../auth/login">have an account?</a>
+
+  </form>
+  <%- include('../Partials/footer') %>
+<script src="../../Public/Javascript/togglesearch.js"></script>
+
+<script src="../../Public/Javascript/auth.js"></script>
+</body>
+

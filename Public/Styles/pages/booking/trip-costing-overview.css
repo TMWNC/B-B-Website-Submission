@@ -1,0 +1,17 @@
+.trip-costing-confirmation{
+    display: grid;
+    row-gap: 1em;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    padding: 1em;
+    width: 100%;
+    }
+    
+    .trip-costing-confirmation .heading{
+       display: flex;
+        justify-self: left;
+    }
+
+    .trip-costing-confirmation div p{
+        font-size: clamp(1.4rem, 1.8rem, 2rem);
+    }

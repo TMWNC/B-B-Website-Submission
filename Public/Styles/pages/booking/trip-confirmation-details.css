@@ -1,0 +1,62 @@
+.trip-confirmation-details{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+padding: 1rem;
+
+
+    row-gap: 1em;
+
+justify-items: center;
+align-items: center;
+
+min-height: 150h;
+
+
+}
+
+.trip-costing-confirmation{
+  grid-area:costing;
+}
+.trip-flight-confirmation{
+  grid-area:flightoverview
+}
+.trip-confirmation-overview{
+  grid-area: tripoverview;
+}
+.trip-hotel-confirmation{
+  grid-area: hotel-confirmation;
+}
+
+.trip-confirmation-details .trip-confirmation-Title{
+  grid-area: triptitle;
+}
+@media (width >= 768px) {
+    /* Small Ipad minit size in landscape */
+
+    
+  }
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+  
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+
+
+
+
+    }
+  
+   
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

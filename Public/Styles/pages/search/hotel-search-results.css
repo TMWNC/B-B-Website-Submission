@@ -1,0 +1,50 @@
+.hotel-search-results{
+    grid-area: hotelresults;
+    min-height: 50rem;
+ 
+    padding: 1em;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+}
+
+
+
+@media (width >= 768px) {
+    /* Small Ipad minit size in landscape */
+    .hotel-search-results{
+        grid-area: hotelresults;
+        min-height: 50rem;
+     
+        padding: 1em;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2em;
+    }
+    
+  }
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+  
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+    
+
+  
+    }
+  
+   
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

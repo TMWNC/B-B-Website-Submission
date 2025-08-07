@@ -1,0 +1,83 @@
+.info-banner{
+    width: 100%;
+    height: 3rem;
+    background-color: var(--AccentYellowColour);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.info-banner p{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: clamp(0.4rem, 0.7rem, 1.2rem);
+}
+
+.logoContainer{
+  max-width: 8rem;
+  max-height: 10rem;
+  justify-self: center;
+}
+
+.logoContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.1em;
+}
+
+@media (width >= 768px) {
+
+  .info-banner p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: clamp(0.4rem, 0.9rem, 1.2rem);
+}
+
+
+
+.logoContainer{
+  max-width: 30rem;
+  max-height: 30rem;
+}
+
+.logoContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1em;
+}
+  }
+  
+  
+  @media (width >= 1024px) {
+    /* Small laptops and larger tablets in landscape */
+    
+  
+    .info-banner p{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: clamp(0.4rem, 1.1rem, 1.2rem);
+  }
+  }
+  
+  
+  @media (width >= 1280px) {
+  /* for laptops make the bar horizontal and set the burger menu to be hidden */
+    
+}
+    
+  
+  
+  
+  @media (width >= 1440px) {
+    /* Larger desktops and ultrawide monitors */ 
+    
+  }
+  

@@ -1,0 +1,14 @@
+.CreateForm{
+    margin-top: 5rem;
+    justify-self: center;
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+   background-color: var(--AccentGreyColour);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 2em;
+    margin-bottom: 5rem;
+
+}
